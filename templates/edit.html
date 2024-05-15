@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+  {% if movie %}
+  <div class="content">
+    <h1 class="heading">{{ movie.title }}</h1>
+      <p class="description">Edit Movie Rating</p>
+      {{ render_form(form) }}
+    </div>
+  {% else %}
+    <h1 class="heading">This Movie Record Doesn't Exist</h1>
+  {% endif %}
+{% endblock %}
